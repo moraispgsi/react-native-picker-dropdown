@@ -35,7 +35,7 @@ export default class Picker extends Component {
     const values = children.map(child => child.props.value)
     const flatStyle = (style ? StyleSheet.flatten(style) : {})
 
-    if (Platform.OS === 'ios') {
+    
       const { selectedValue } = this.props
 
       const defaultTextStyle = {
@@ -64,20 +64,5 @@ export default class Picker extends Component {
           <Text style={[defaultTextStyle, textStyle]}>▼</Text>
         </TouchableOpacity>
       )
-    } else {
-      return (
-        <View
-          style={[{
-            alignSelf: 'stretch',
-            paddingHorizontal: 6,
-          }, flatStyle]}
-        >
-          <ReactNative.Picker
-            {...this.props}
-            style={textStyle}
-          />
-        </View>
-      )
-    }
   }
 }
