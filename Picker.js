@@ -61,7 +61,7 @@ export default class Picker extends Component {
           >
             {labels[values.indexOf(selectedValue)]}
           </Text>
-          <Text style={[{color: 'black'}, defaultTextStyle, textStyle]}>▼</Text>
+          <Text style={[defaultTextStyle, textStyle]}>▼</Text>
         </TouchableOpacity>
       )
     } else {
